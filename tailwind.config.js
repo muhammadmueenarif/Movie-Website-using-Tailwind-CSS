@@ -2,7 +2,11 @@
 module.exports = {
   content: ["*"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'header-background':"url('/Images/civil_war.jpg')"
+      },
+    },
   },
   plugins: [],
 }

@@ -1,47 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Website Using Tailwind CSS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Website Using Tailwind CSS</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme:{
-        screens:{
+      theme: {
+        screens: {
           xs: "400px",
           sm: "640px",
           md: "768px",
           lg: "1024px",
           xl: "1280px",
-          "2xl":"1536px "
+          "2xl": "1536px "
         }
       }
     }
   </script>
 </head>
+
 <body>
-    
+
   <!-- navbar started -->
-      <nav class="flex bg-gray-800 w-full h-auto text-white justify-between items-center p-2">
-        <div class="flex flex-row">
-          <h2 class="text-lg m-3 w-24 h-auto text-orange-500 cursor-pointer">ALL ABOUT <span class="font-bold">Movies</span></h2>
-          <button class="mt-2 w-14 h-10 rounded-md text-orange-500">Explore</button>
+  <nav class="flex bg-gray-800 w-full h-auto text-white justify-between items-center p-2">
+    <div class="flex flex-row">
+      <h2 class="text-lg m-3 w-24 h-auto text-orange-500 cursor-pointer">ALL ABOUT <span class="font-bold">Movies</span>
+      </h2>
+      <button class="mt-2 w-14 h-10 rounded-md text-orange-500">Explore</button>
+    </div>
+
+    <div> <input placeholder="Search here" type="search" class="bg-black rounded-md p-1 w-80 mr-8"> </div>
+
+  </nav>
+  <!-- navbar ended -->
+
+  <!-- header start.-->
+  <header class=" w-full h-auto flex">
+
+    <!-- header left section -->
+    <div class="w-2/3 h-[430px] bg-[url('/Images/civil_war.jpg')] bg-cover flex justify-around items-end 
+          space-x-10 text-white font-bold">
+      <img src="./Images/civil_war.jpg" alt="Civil War Image" class="w-40 h-60 mb-3 ml-10 rounded-md">
+      <div class="flex flex-col space-y-5 mb-10">
+        <h1 class="text-4xl font-bold">Civil War</h1>
+        <p class="">In the real future, a group of war journalists attempt to survive while reporting
+          the truth as the United States stand on the brink of civil war. <br>
+          Genres: War, Action, Drama <br>
+        </p>
+        <i class="fa fa-star-o font-bold"> Rating: 7.2</i>
+      </div>
+    </div>
+
+    <!-- header right section -->
+    <div class="w-1/3 bg-black flex flex-col">
+      <h2 class="text-xl font-bold m-3 text-orange-400">Up Next</h2>
+
+      <div class="w-96 h-80 ml-6 text-white bg-gray-800 flex flex-col gap-1">
+        <!-- card 1 -->
+        <div class="flex m-2">
+          <img src="./Images/farFromMan.jpg" alt="Far From Man" class="mt-1 w-20 h-20">
+          <p class="text-sm w-full h-20 ml-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+            accusamus tenetur iure soluta
+            quam aliquam fugiat perspiciatis animi fuga ex natus hic sapiente,
+            consequatur nisi at debitis ipsam molestiae dolores.</p>
         </div>
 
-        <div> <input placeholder="Search here" type="search" class="bg-black rounded-md p-1 w-80 mr-8"> </div>
+        <!-- card 2 -->
+        <div class="flex m-2">
+          <img src="./Images/fightclub.jpg" alt="Far From Man" class="mt-1 w-20 h-20">
+          <p class="text-sm w-full h-20 ml-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+            accusamus tenetur iure soluta
+            quam aliquam fugiat perspiciatis animi fuga ex natus hic sapiente,
+            consequatur nisi at debitis ipsam molestiae dolores.</p>
+        </div>
 
-      </nav>
-        <!-- navbar ended -->
+        <!-- card 3 -->
+        <div class="flex m-2">
+          <img src="./Images/godfather.jpg" alt="Far From Man" class="mt-1 w-20 h-20">
+          <p class="text-sm w-full h-20 ml-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+            accusamus tenetur iure soluta
+            quam aliquam fugiat perspiciatis animi fuga ex natus hic sapiente,
+            consequatur nisi at debitis ipsam molestiae dolores.</p>
+        </div>
+      </div>
 
-        <!-- header start.-->
-         <header>
-          
-          <div class=""></div>
-          <div></div>
+      <h1 class="text-white font-bold m-3">Browse Movies ></h1>
+    </div>
 
-         </header>
-        <!-- header ended -->
+  </header>
+  <!-- header ended -->
 
+  <!-- movies cards section start-->
+  <div class="w-full flex flex-wrap bg-black space-y-3">
+    <!-- movie card 1 -->
+    <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+      <img src="./Images/fightclub.jpg" alt="Fight club Card" class="w-full h-41">
+      <h2 class="font-bold">Fight Club</h2>
+      <i class="fa fa-star-o"> Rating: 8.7</i>
+      <p>Language : EN</p>
+      <p>Release : 1991</p>
+    </div>
+
+    <!-- movie card 2 -->
+    <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+      <img src="./Images/cityOfGod.jpeg" alt="City of God Card" class="w-full h-41">
+      <h2 class="font-bold">City of God</h2>
+      <i class="fa fa-star-o"> Rating: 9.2</i>
+      <p>Language : EN</p>
+      <p>Release : 2004</p>
+    </div>
+
+    <!-- movie card 3 -->
+    <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+      <img src="./Images/flynn.jpg" alt="Flynn Movie Card" class="w-full h-41">
+      <h2 class="font-bold">Flynn</h2>
+      <i class="fa fa-star-o"> Rating: 6.7</i>
+      <p>Language : EN</p>
+      <p>Release : 2002</p>
+    </div>
+
+    <!-- movie card 4 -->
+      <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+        <img src="./Images/civil_war.jpg" alt="City of God Card" class="w-full h-41">
+        <h2 class="font-bold">Civil War</h2>
+        <i class="fa fa-star-o"> Rating: 6.2</i>
+        <p>Language : EN</p>
+        <p>Release : 2024</p>
+      </div>
+
+    <!-- movie card 5 -->
+      <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+        <img src="./Images/darkKnight.jpeg" alt="City of God Card" class="w-full h-41">
+        <h2 class="font-bold">Dark Knight</h2>
+        <i class="fa fa-star-o"> Rating: 9.0</i>
+        <p>Language : EN</p>
+        <p>Release : 2008</p>
+      </div>
+
+    <!-- movie card 6 -->
+      <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+        <img src="./Images/farFromMan.jpg" alt="City of God Card" class="w-full h-41">
+        <h2 class="font-bold">Far From Man</h2>
+        <i class="fa fa-star-o"> Rating: 7.6</i>
+        <p>Language : EN</p>
+        <p>Release : 2008</p>
+      </div>
+
+    <!-- movie card 7 -->
+    <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+      <img src="./Images/godfather.jpg" alt="City of God Card" class="w-full h-41">
+      <h2 class="font-bold">God Father</h2>
+      <i class="fa fa-star-o"> Rating: 9.6</i>
+      <p>Language : EN</p>
+      <p>Release : 1996</p>
+    </div>
+
+    <!-- movie card 8 -->
+      <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+        <img src="./Images/GoodFellas.jpeg" alt="City of God Card" class="w-full h-41">
+        <h2 class="font-bold">Good Fellas</h2>
+        <i class="fa fa-star-o"> Rating: 7.8</i>
+        <p>Language : EN</p>
+        <p>Release : 1998</p>
+      </div>
+
+    <!-- movie card 9 -->
+      <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+        <img src="./Images/jules_verne.jpg" alt="City of God Card" class="w-full h-41">
+        <h2 class="font-bold">Jules Warne</h2>
+        <i class="fa fa-star-o"> Rating: 6.8</i>
+        <p>Language : EN</p>
+        <p>Release : 1985</p>
+      </div>
+
+    <!-- movie card 10 -->
+      <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+        <img src="./Images/LifeIsBeautiful.jpeg" alt="City of God Card" class="w-full h-41">
+        <h2 class="font-bold">Life is Beautiful</h2>
+        <i class="fa fa-star-o"> Rating: 9.5</i>
+        <p>Language : EN</p>
+        <p>Release : 1996</p>
+    </div>
+
+    <!-- movie card 11 -->
+      <div class="w-1/6 bg-gray-700 flex flex-col text-white space-x-3 space-y-1 p-3 hover:scale-105">
+        <img src="./Images/ringOfPower.jpg" alt="City of God Card" class="w-full h-41">
+        <h2 class="font-bold">Ring of Power</h2>
+        <i class="fa fa-star-o"> Rating: 8.5</i>
+        <p>Language : EN</p>
+        <p>Release : 2022</p>
+      </div>
+  </div>
+  <!-- movies cards section end -->
+   
+  <!-- load more button -->
+    <div class="bg-black flex justify-center p-1">
+      <button class="bg-transparent text-white border-2 border-white font-bold py-2 px-4
+       rounded hover:bg-zinc-900">Load More...</button>
+    </div>
+
+    <!-- footer started -->
+      <footer class="bg-black w-full text-white flex justify-between p-2">
+        <div>
+          <h2 class="font-bold">All About <br> Movies</h2>
+        </div>
+
+        <div class="flex space-x-14 mr-5">
+          <div class="space-y-2">
+            <h2 class="font-bold">Resources</h2>
+            <p>Flowbite</p>
+            <p>Tailwind CSS</p>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="font-bold">Follow Us</h2>
+            <p>Github</p>
+            <p>Discord</p>
+          </div>
+
+          <div class="space-y-2">
+            <h2 class="font-bold">Legal</h2>
+            <p>Privacy Policy</p>
+            <p>Terms and Conditions</p>
+          </div>
+
+        </div>
+      
+      </footer>
+    <!-- footer ended -->
+     
+    <hr>
+
+     <!-- copyright on left side and social icons of fb, discord, twitter, github on right side -->
+      <div class="bg-black flex justify-between items-center p-2">
+        <p class="text-gray-400">Copyright © 2022 All rights reserved</p>
+        <div class="flex space-x-5 text-gray-400 mr-10 hover:cursor-pointer">
+          <a href="#"><i class="fa fa-facebook-square"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+      </div>
 </body>
+
 </html>
